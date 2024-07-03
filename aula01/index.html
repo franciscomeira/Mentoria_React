@@ -4,13 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title> Aula 01 </title>
+    <script type="text/javascript">
+        const randomIntArrayInRange = () =>
+            Array.from(
+                { length: Math.floor(Math.random() * (10 - 3 + 1)) + 3 },
+                () => Math.random()
+            );
+
+
+        const retornoApi = ["Aula de Banco", "Guardar roupas", "Beber agua"];
+
+        const retornoDeTamanhoAleatorio = randomIntArrayInRange();
+
+        const retornoZerado = [];
+
+        // 3. pegar o form depois da janela ser carregada funciona
+        // pq o body já foi carregado
+        window.onload = function () {
+            // <span>
+            // <label>Guardar Roupas</label> <br>
+            // <input type="checkbox">
+            // </span>
+
+            const form = document.getElementById("meu_form");
+
+            const primeiroItem = document.createElement("span");
+            const primeiroItemLabel = document.createElement("label");
+            primeiroItemLabel.appendChild(document.createTextNode(retornoApi[0]));
+
+            const primeiroItemCheckbox = document.createElement("input");
+            primeiroItemCheckbox.setAttribute("type", "checkbox");
+
+            primeiroItem.appendChild(primeiroItemLabel);
+            primeiroItem.appendChild(primeiroItemCheckbox);
+
+            // const child = document.createElement("h1");
+            // child.appendChild(document.createTextNode("Blah"));
+
+            form.appendChild(primeiroItem);
+        };
+
+
+        // 2. form que não funciona porque está sendo carregado antes de body
+        // const form = document.getElementById("meu_form");
+        // console.log({form});
+
+        // 1. alerta pra testar o js
+        // alert("Testando alerta")
+
+    </script>
 </head>
 
 <body>
     <h1>Aula de HTML - Mentoria React - ToDoList</h1>
 
-    <form>
-        <input type="checkbox">
+    <form id="meu_form">
+        <!-- <input type="checkbox">
         <label>Aula de Banco</label> <br>
         <input type="checkbox">
         <label>Guardar Roupas</label> <br>
@@ -18,8 +67,8 @@
         <label>Cozinhar</label> <br>
         <input type="checkbox">
         <label>Beber Agua</label> <br>
-        <br>
-<button>Limpar</button>
+        <br>  -->
+        <button>Limpar</button>
     </form>
 
 </body>

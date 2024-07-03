@@ -1,0 +1,19 @@
+## Criar TodoList ##
+1 - Exibir Tarefas
+> colocar todos os itens da api no form
+>> conseguir utilizar um array de qualquer tamanho
+>> conseguir utilizar um array vazio
+
+> alinhar os elementos
+>> checkbox a esquerda
+>> quebra de linha
+
+> deixar o botão por último
+>> colocar um espaço e botão para novo item na lista
+
+2 - Incluir tarefa
+3 - Concluir Tarefas
+4 - Remover
+
+
+
